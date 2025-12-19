@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robotframework-pywinauto"
+version = "0.1.0"
+description = "Robot Framework library for Windows desktop application automation using pywinauto"
+readme = "README.rst"
+authors = [{ name = "Author Name", email = "author@example.com" }]
+license = { text = "Apache License 2.0" }
+classifiers = [
+    "Framework :: Robot Framework",
+    "Framework :: Robot Framework :: Library",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Quality Assurance",
+]
+keywords = ["robotframework", "testing", "testautomation", "windows", "pywinauto"]
+requires-python = ">=3.8"
+dependencies = [
+    "robotframework>=5.0",
+    "robotframework-pythonlibcore>=4.4.1",
+    "pywinauto>=0.6.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "robotframework-robocop>=2.0",
+    "robotframework-lint>=1.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/robotframework/robotframework-pywinauto"
+Repository = "https://github.com/robotframework/robotframework-pywinauto.git"
+Issues = "https://github.com/robotframework/robotframework-pywinauto/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pywinautoLibrary*"]

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4 (Python 3.11.7 on win32)" generated="2025-12-19T09:52:34.992393" rpa="false" schemaversion="5">
+<suite id="s1" name="Application" source="C:\workspace\robotframework_pywinauto\atest\acceptance\keywords\application.robot">
+<test id="s1-t1" name="Open Notepad and Write Text" line="6">
+<kw name="Open Application" owner="pywinautoLibrary">
+<msg time="2025-12-19T09:52:35.324857" level="INFO">Opening application: notepad.exe</msg>
+<msg time="2025-12-19T09:52:45.889809" level="INFO">C:\ProgramData\anaconda3\Lib\site-packages\pywinauto\application.py:1076: RuntimeWarning: Application is not loaded correctly (WaitForInputIdle failed)
+  warnings.warn('Application is not loaded correctly (WaitForInputIdle failed)', RuntimeWarning)</msg>
+<arg>notepad.exe</arg>
+<status status="PASS" start="2025-12-19T09:52:35.324857" elapsed="10.564952"/>
+</kw>
+<kw name="Wait For Window" owner="pywinautoLibrary">
+<msg time="2025-12-19T09:52:45.890824" level="INFO">Waiting for window: 无标题 - Notepad</msg>
+<msg time="2025-12-19T09:53:04.084136" level="INFO">Capturing screenshot</msg>
+<msg time="2025-12-19T09:53:13.144256" level="WARN">Keyword 'Capture Screenshot' could not be run on failure: No windows for that process could be found</msg>
+<msg time="2025-12-19T09:53:13.144767" level="FAIL">ElementNotFound: Element with locator '无标题 - Notepad' not found.</msg>
+<arg>无标题 - Notepad</arg>
+<status status="FAIL" start="2025-12-19T09:52:45.890824" elapsed="27.254958">ElementNotFound: Element with locator '无标题 - Notepad' not found.</status>
+</kw>
+<kw name="Click Element" owner="pywinautoLibrary">
+<arg>Edit</arg>
+<status status="NOT RUN" start="2025-12-19T09:53:13.146301" elapsed="0.000000"/>
+</kw>
+<kw name="Type Text" owner="pywinautoLibrary">
+<arg>Hello, Robot Framework!</arg>
+<status status="NOT RUN" start="2025-12-19T09:53:13.146301" elapsed="0.000000"/>
+</kw>
+<kw name="Close Application" owner="pywinautoLibrary">
+<status status="NOT RUN" start="2025-12-19T09:53:13.146301" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Applications" owner="pywinautoLibrary" type="TEARDOWN">
+<msg time="2025-12-19T09:53:13.147318" level="INFO">Closing all applications</msg>
+<status status="PASS" start="2025-12-19T09:53:13.147318" elapsed="0.000514"/>
+</kw>
+<doc>Test opening Notepad, writing text, and closing it.</doc>
+<status status="FAIL" start="2025-12-19T09:52:35.324348" elapsed="37.823484">ElementNotFound: Element with locator '无标题 - Notepad' not found.</status>
+</test>
+<test id="s1-t2" name="Open Multiple Applications" line="14">
+<kw name="Open Application" owner="pywinautoLibrary">
+<msg time="2025-12-19T09:53:13.148842" level="INFO">Opening application: notepad.exe</msg>
+<msg time="2025-12-19T09:53:23.678071" level="INFO">${alias1} = 1</msg>
+<var>${alias1}</var>
+<arg>notepad.exe</arg>
+<status status="PASS" start="2025-12-19T09:53:13.148842" elapsed="10.529229"/>
+</kw>
+<kw name="Wait For Window" owner="pywinautoLibrary">
+<msg time="2025-12-19T09:53:23.678071" level="INFO">Waiting for window: 无标题 - Notepad</msg>
+<msg time="2025-12-19T09:53:42.052710" level="INFO">Capturing screenshot</msg>
+<msg time="2025-12-19T09:53:51.344111" level="WARN">Keyword 'Capture Screenshot' could not be run on failure: No windows for that process could be found</msg>
+<msg time="2025-12-19T09:53:51.344111" level="FAIL">ElementNotFound: Element with locator '无标题 - Notepad' not found.</msg>
+<arg>无标题 - Notepad</arg>
+<status status="FAIL" start="2025-12-19T09:53:23.678071" elapsed="27.667562">ElementNotFound: Element with locator '无标题 - Notepad' not found.</status>
+</kw>
+<kw name="Open Application" owner="pywinautoLibrary">
+<var>${alias2}</var>
+<arg>notepad.exe</arg>
+<status status="NOT RUN" start="2025-12-19T09:53:51.345633" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Window" owner="pywinautoLibrary">
+<arg>无标题 - Notepad</arg>
+<status status="NOT RUN" start="2025-12-19T09:53:51.345633" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Application" owner="pywinautoLibrary">
+<arg>${alias1}</arg>
+<status status="NOT RUN" start="2025-12-19T09:53:51.346643" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="pywinautoLibrary">
+<arg>Edit</arg>
+<status status="NOT RUN" start="2025-12-19T09:53:51.346643" elapsed="0.000000"/>
+</kw>
+<kw name="Type Text" owner="pywinautoLibrary">
+<arg>First Notepad</arg>
+<status status="NOT RUN" start="2025-12-19T09:53:51.347176" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Application" owner="pywinautoLibrary">
+<arg>${alias2}</arg>
+<status status="NOT RUN" start="2025-12-19T09:53:51.347176" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="pywinautoLibrary">
+<arg>Edit</arg>
+<status status="NOT RUN" start="2025-12-19T09:53:51.348214" elapsed="0.000000"/>
+</kw>
+<kw name="Type Text" owner="pywinautoLibrary">
+<arg>Second Notepad</arg>
+<status status="NOT RUN" start="2025-12-19T09:53:51.348733" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Applications" owner="pywinautoLibrary">
+<status status="NOT RUN" start="2025-12-19T09:53:51.348733" elapsed="0.001026"/>
+</kw>
+<kw name="Close All Applications" owner="pywinautoLibrary" type="TEARDOWN">
+<msg time="2025-12-19T09:53:51.350273" level="INFO">Closing all applications</msg>
+<status status="PASS" start="2025-12-19T09:53:51.349759" elapsed="0.000514"/>
+</kw>
+<doc>Test opening multiple applications and switching between them.</doc>
+<status status="FAIL" start="2025-12-19T09:53:13.147832" elapsed="38.202441">ElementNotFound: Element with locator '无标题 - Notepad' not found.</status>
+</test>
+<test id="s1-t3" name="Connect To Existing Application" line="28">
+<kw name="Open Application" owner="pywinautoLibrary">
+<msg time="2025-12-19T09:53:51.355512" level="INFO">Opening application: notepad.exe</msg>
+<arg>notepad.exe</arg>
+<status status="PASS" start="2025-12-19T09:53:51.355512" elapsed="10.541416"/>
+</kw>
+<kw name="Wait For Window" owner="pywinautoLibrary">
+<msg time="2025-12-19T09:54:01.897467" level="INFO">Waiting for window: 无标题 - Notepad</msg>
+<msg time="2025-12-19T09:54:20.600573" level="INFO">Capturing screenshot</msg>
+<msg time="2025-12-19T09:54:30.325967" level="WARN">Keyword 'Capture Screenshot' could not be run on failure: No windows for that process could be found</msg>
+<msg time="2025-12-19T09:54:30.326477" level="FAIL">ElementNotFound: Element with locator '无标题 - Notepad' not found.</msg>
+<arg>无标题 - Notepad</arg>
+<status status="FAIL" start="2025-12-19T09:54:01.897467" elapsed="28.429522">ElementNotFound: Element with locator '无标题 - Notepad' not found.</status>
+</kw>
+<kw name="get_current_process_id">
+<var>${process_id}</var>
+<doc>Get the process ID of the current application.</doc>
+<status status="NOT RUN" start="2025-12-19T09:54:30.327504" elapsed="0.000000"/>
+</kw>
+<kw name="Close Application" owner="pywinautoLibrary">
+<status status="NOT RUN" start="2025-12-19T09:54:30.327504" elapsed="0.000000"/>
+</kw>
+<kw name="Connect To Application" owner="pywinautoLibrary">
+<arg>process_id=${process_id}</arg>
+<status status="NOT RUN" start="2025-12-19T09:54:30.327504" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Window" owner="pywinautoLibrary">
+<arg>无标题 - Notepad</arg>
+<status status="NOT RUN" start="2025-12-19T09:54:30.327504" elapsed="0.000000"/>
+</kw>
+<kw name="Close Application" owner="pywinautoLibrary">
+<status status="NOT RUN" start="2025-12-19T09:54:30.327504" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Applications" owner="pywinautoLibrary" type="TEARDOWN">
+<msg time="2025-12-19T09:54:30.329086" level="INFO">Closing all applications</msg>
+<status status="PASS" start="2025-12-19T09:54:30.329086" elapsed="0.000000"/>
+</kw>
+<doc>Test connecting to an existing Notepad instance.</doc>
+<status status="FAIL" start="2025-12-19T09:53:51.353994" elapsed="38.976097">ElementNotFound: Element with locator '无标题 - Notepad' not found.</status>
+</test>
+<status status="FAIL" start="2025-12-19T09:52:34.993926" elapsed="115.337691"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Application" id="s1" pass="0" fail="3" skip="0">Application</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-12-19T09:52:34.988758" level="WARN">Error in file 'C:\workspace\robotframework_pywinauto\atest\acceptance\keywords\application.robot' on line 48: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-19T09:52:34.989264" level="WARN">Error in file 'C:\workspace\robotframework_pywinauto\atest\acceptance\keywords\application.robot' on line 53: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-19T09:53:13.144256" level="WARN">Keyword 'Capture Screenshot' could not be run on failure: No windows for that process could be found</msg>
+<msg time="2025-12-19T09:53:51.344111" level="WARN">Keyword 'Capture Screenshot' could not be run on failure: No windows for that process could be found</msg>
+<msg time="2025-12-19T09:54:30.325967" level="WARN">Keyword 'Capture Screenshot' could not be run on failure: No windows for that process could be found</msg>
+</errors>
+</robot>

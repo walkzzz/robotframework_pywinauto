@@ -1,0 +1,8 @@
+robotframework>=5.0
+robotframework-pythonlibcore>=4.4.1
+pywinauto>=0.6.8
+
+[dev]
+pytest>=7.0
+robotframework-robocop>=2.0
+robotframework-lint>=1.1
