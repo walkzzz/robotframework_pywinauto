@@ -110,6 +110,16 @@ class ApplicationManagementKeywords(LibraryComponent):
         app = Application(backend='uia').connect(**kwargs)
         return self.ctx._apps.register(app, alias)
 
+    def get_current_process_id(self) -> int:
+        """Get the process ID of the current active application.
+
+        :return: Process ID of the current active application.
+        :rtype: int
+        :raises pywinautoLibrary.errors.NoOpenApplication: If no application is open.
+        """
+        self.info("Getting current process ID")
+        return self.ctx.app.process
+
     def is_application_open(self, alias: str) -> bool:
         """Check if an application instance is open.
 
